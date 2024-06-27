@@ -18,7 +18,7 @@
                 transform: translateX(10px);
             }
         }
-        
+
 
         .back-link i {
             margin-right: 8px;
@@ -108,6 +108,11 @@
                 <p style="color: red">{{$message}}</p>
                 @enderror
                 <br>
+
+
+                <input type="checkbox" id="role" name="role" value="admin" style="width: 15px; height: 15px; margin-right: 5px;">
+                <br>
+
 
                 <label for="personal_number">JMBG</label>
                 <input type="text" id="personal_number" name="personal_number" value="{{ old('personal_number') }}">
