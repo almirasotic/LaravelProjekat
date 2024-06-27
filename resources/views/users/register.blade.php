@@ -110,8 +110,7 @@
                 <br>
 
 
-                <input type="checkbox" id="role" name="role" value="admin" style="width: 15px; height: 15px; margin-right: 5px;">
-                <br>
+            
 
 
                 <label for="personal_number">JMBG</label>

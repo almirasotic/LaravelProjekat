@@ -73,12 +73,7 @@ class UserController extends Controller
         $request->picture->move(public_path('storage'), $imageName);
         $formFields['picture'] = $imageName;
 
-        // Check if the role checkbox is checked
-        if ($request->has('role') && $request->input('role') == 'admin') {
-            $formFields['role'] = 'admin';
-        } else {
-            $formFields['role'] = 'korisnik';
-        }
+       
 
         $user = User::create($formFields);
 
