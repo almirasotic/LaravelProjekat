@@ -82,7 +82,7 @@ class UserController extends Controller
 
         $user = User::create($formFields);
 
-         $user->sendEmailVerificationNotification();
+        //  $user->sendEmailVerificationNotification();
 
         auth()->login($user);
 
