@@ -1,12 +1,10 @@
-
 .themes_Body {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  margin-bottom: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 80px;
 }
-
 
 /* .newsFeed{
   width: 20%;
@@ -140,9 +138,6 @@
     }
 }
 
-
-
-
 .delete_newsFeed {
     font-size: 14px;
     color: red;
@@ -151,7 +146,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 
 .themes_Grid {
     width: 72%;
@@ -163,7 +157,6 @@
     height: 30%;
 }
 
-
 .theme_Item {
     width: 92%;
     height: 250px;
@@ -174,7 +167,7 @@
     /* border-radius: 5px; */
 }
 
-.theme_createDate{
+.theme_createDate {
     color: black;
     font-weight: 400;
     float: right;
@@ -183,8 +176,6 @@
     padding-right: 15px;
     font-style: italic;
 }
-
-
 
 .themes_Image {
     width: 35%;
@@ -197,14 +188,14 @@
     flex-direction: column;
 }
 
-.image{
+.image {
     height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.date{
+.date {
     width: 100%;
     height: 15%;
 }
@@ -212,8 +203,8 @@
 .themes_Image img {
     max-width: auto;
     border-radius: 2px;
-    align-items:right;
-    border-radius:2px;
+    align-items: right;
+    border-radius: 2px;
     height: 100%;
     object-fit: cover;
 }
@@ -229,9 +220,7 @@
     position: relative;
 }
 
-
-
-.theme_User{
+.theme_User {
     width: 15%;
     height: 100%;
     padding: 20px;
@@ -240,8 +229,6 @@
     display: flex;
 }
 
-
-
 .themes_Title {
     color: black;
     font-size: 20px;
@@ -249,30 +236,24 @@
     padding-bottom: 10px;
 }
 
-
-.themes_Title:hover{
+.themes_Title:hover {
     color: black;
 }
-
 
 .themes_Text {
     font-size: 15px;
     color: black;
-
 }
 
-
-.create_new_theme{
+.create_new_theme {
     display: flex;
     justify-content: center;
 }
 
-
-
-.create_new_theme a{
+.create_new_theme a {
     text-decoration: none;
     border: none;
-    border: 1px solid green;
+    background-color: white;
     border-radius: 5px;
     align-self: center;
     padding: 10px;
@@ -282,16 +263,12 @@
     font-weight: bold;
 }
 
-
 .create_new_theme a:hover {
     color: black;
     text-decoration: underline;
 }
 
-
-
-
-.new_theme{
+.new_theme {
     /* background-color: whitesmoke; */
     /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
     border: 5px;
@@ -300,12 +277,11 @@
     height: 350px;
 }
 
-
 .go-back-button {
     display: none;
 }
 
-.no_theme{
+.no_theme {
     width: 40%;
     display: flex;
     justify-content: center;

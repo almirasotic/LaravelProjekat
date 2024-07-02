@@ -15,8 +15,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
-         .newsFeed {
+
+       .newsFeed {
             display: none;
+            width: 300px; /* Adjust width as needed */
+            background-color: white;
+            border-right: 1px solid #ccc; /* Add border as needed */
+            overflow-y: auto; /* Enable scrolling */
+            padding: 20px; /* Adjust padding as needed */
+            float: left; /* Float to the left side */
         }
         .show-news-feed .newsFeed {
             display: block;
@@ -29,42 +36,30 @@
             cursor: pointer;
             width: 70px;
             height: 50px;
+            margin-bottom: 20px; /* Add space below the button */
         }
         #toggleNewsFeedBtn:hover {
             background-color: #f0f0f0;
         }
+        .themes_Body {
+            overflow: hidden; /* Prevents float element from affecting the parent */
+        }
     </style>
 </head>
 <body class="body">
+
     @include('partials._navbar')
     <x-flash-message/>
 
     <x-layout>
 
         <link rel="stylesheet" href="{{ asset('css/partials/search.css') }}">
-
-
-
-
         <link rel="stylesheet" href="{{ asset('css/themes.css') }}">
 
         <div class="themes_Body">
 
-            <div class="themes_Grid">
-                @unless ($themes->isEmpty())
-                    @foreach ($themes as $theme)
-                        <x-theme-card :theme="$theme" />
-                    @endforeach
-                @else
-                    <div>
-                        <p>Na osnovu ove pretrage, ne postoji tema</p>
-                    </div>
-                @endunless
-            </div>
-
-
             <button id="toggleNewsFeedBtn">procitajte jos</button>
-            <div class="newsFeed">
+            <div class="newsFeed" style=" background-color: rgb(165, 232, 84);">
                 <h2>Novosti</h2>
                 @foreach ($newsFeed as $item)
                 <x-newsFeed  :item="$item"/>
@@ -76,19 +71,28 @@
                                 @csrf
                                 <label for="content">Unesite </label>
                                 <textarea name="content" rows="4" cols="50"></textarea>
-                                <button type="submit"><i class="fa-solid fa-circle-plus" style="color: green; margin-right: 5px"></i>Dodaj novu vest</button>
+                                <button type="submit" style="width: 150px;">Prikaz nove vesti</button>
                             </form>
                         </div>
                     @endif
                 @endauth
             </div>
-
+            <div class="themes_Grid">
+                @unless ($themes->isEmpty())
+                    @foreach ($themes as $theme)
+                        <x-theme-card :theme="$theme" />
+                    @endforeach
+                @else
+                    <div>
+                        <p>ne postoji tema po ovoj pretrazi</p>
+                    </div>
+                @endunless
+            </div>
         </div>
 
         <div class="p-6">
             {{$themes->links()}}
         </div>
-
 
     </x-layout>
     <footer>

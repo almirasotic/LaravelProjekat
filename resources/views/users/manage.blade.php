@@ -2,7 +2,7 @@
 <x-layout>
 
     @unless ($users->isEmpty())
-        <div class="manage_container">
+        <div class="manage_container" style="background-color: rgb(165, 232, 84); width: 65%; margin-left:150px; margin-top: 50px;">
             <h1 class="heading">Upravljanje korisnicima</h1>
             <label style="padding-bottom: 10px; font-style:italic"></label>
 
@@ -41,7 +41,7 @@
                             <form style="display: inline;" method="POST" action="/users/{{ $user->id }}" id="delete-form-{{ $user->id }}">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-danger " style="width: 90px" onclick="confirmDelete({{ $user->id }})"><i class="fa-solid fa-trash" style="padding-right: 5px"></i>Izbriši</button>
+                                <button class="btn btn-danger " style="width: 90px;  background-color: rgb(165, 232, 84); border: none; color: black;" onclick="confirmDelete({{ $user->id }})">Izbrisi korisnika</button>
                             </form>
                         </td>
                     </tr>

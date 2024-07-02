@@ -15,16 +15,19 @@
         <ul class="nav-links">
             <div class="padding">
                 @guest
-                    <a href="/" style="padding-top:10px; padding-right: 20px; color: white; text-decoration:none">Home page</a>
+                    <!-- <a href="/" style="padding-top:10px; padding-right: 20px; color: white; text-decoration:none">Home page</a> -->
                 @endguest
                 @auth
-                    <li><a href="/"> Home page</a></li>
+                    <!-- <li><a href="/"> Home page</a></li> -->
                     @if(auth()->user()->role == 'korisnik')
                         <li><a href="{{ route('followed-themes.index') }}">Teme</a></li>
                     @endif
                     @if(auth()->user()->role == 'moderator')
-                        <li><a href="/themes"> Teme za pracenje</a></li>
-                        <li><a href="/themes/manage"> Podesavanja za teme</a></li>
+                    <ul style="list-style-type: none; padding: 0;">
+    <li style="margin-bottom: 10px;"><a href="/themes">Teme za praćenje</a></li>
+    <li style="margin-bottom: 10px;"><a href="/themes/manage">Podešavanja za teme</a></li>
+</ul>
+
                     @endif
                     @if (auth()->user()->role == 'admin')
                         <li><a href="/users/manage"> Korisnici</a></li>
@@ -33,7 +36,7 @@
                     <li id="userDropdown" class="dropdown">
                         <a href="#" role="button" id="userDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center;">
                             @if (auth()->user()->picture != "null")
-                                <img src="{{ asset('storage/' . auth()->user()->picture) }}" alt="{{ auth()->user()->name }}" style="width:30px;height:30px;border-radius:80px; margin-right:5px">
+                                <!-- <img src="{{ asset('storage/' . auth()->user()->picture) }}" alt="{{ auth()->user()->name }}" style="width:30px;height:30px;border-radius:80px; margin-right:5px"> -->
                             @else
                                 <i class="fa-solid fa-user" style="margin-right:5px"></i>
                             @endif
@@ -44,16 +47,16 @@
                                 @if (auth()->user()->role === 'korisnik')
                                     <form action="/apply-for-moderator" method="POST" class="mod">
                                         @csrf
-                                        <button><i class="fas fa-user" style="padding-right: 5px;"></i>Prijavi se za moderatora</button>
+                                        <button>Prijavi se za moderatora</button>
                                     </form>
                                 @endif
                             @endauth
                             <a class="dropdown-item" style="color: black" href="/users/{{auth()->user()->id}}/resetPassword">
-                                <i class="fas fa-key" style="padding-right: 5px"></i>Promeni šifru</a>
+                               Promeni šifru</a>
                             <form action="/logout" method="POST">
                                 @csrf
                                 <button type="submit" class="dropdown-item">
-                                    <i class="fas fa-sign-out-alt" style="padding-right: 5px"></i><span class="logout">Odjavi se</span>
+                                   <span class="logout">Odjavi se</span>
                                 </button>
                             </form>
                         </div>
@@ -68,7 +71,7 @@
                 </div>
             @endauth
         </ul>
-        <form action="" method="GET" style="margin-left: auto;"> 
+        <form action="" method="GET" style="margin-left: auto;">
             <div class="search-container">
                 <input type="text" placeholder="Pretraga" name="search">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass white-icon"></i></button>

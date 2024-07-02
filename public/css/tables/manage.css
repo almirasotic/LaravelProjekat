@@ -7,7 +7,11 @@
         transform: translateX(10px);
     }
 }
-.heading {
+
+.body{
+    width: 100%;
+}
+/* .heading {
     text-align: center;
     color: black;
     font-size: 35px;
@@ -95,7 +99,7 @@ td {
     margin: 30px auto;
     max-width: 70%;
     font-size: 18px;
-}
+} */
 
 
 

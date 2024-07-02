@@ -34,7 +34,7 @@
 
                 @if ($currentThemesCount < $maxThemesAllowed)
                     <div class="create_new_theme">
-                        <a href="/themes/create"><i class="fa-solid fa-circle-plus" style="padding-right: 5px; color:green"></i>Započni novu temu</a>
+                        <a href="/themes/create">Započni novu temu</a>
                     </div>
                 @else
                 <p class="moving-text" >Unet je maksimalni broj tema</p>

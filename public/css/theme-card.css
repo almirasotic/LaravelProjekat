@@ -10,6 +10,7 @@
     overflow: hidden;
     position: relative;
     margin: 20px;
+    background-color: rgb(165, 232, 84);
 }
 
 .theme_Item:last-child {
@@ -21,7 +22,6 @@
     width: 100%;
     height: 100%;
 }
-
 
 .theme_User {
     display: flex;
@@ -49,9 +49,6 @@
 .themes_Title {
     margin-bottom: 20px;
 }
-
-
-
 
 @media only screen and (max-width: 600px) {
     .theme_Item {

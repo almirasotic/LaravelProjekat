@@ -1,6 +1,7 @@
-body{
+body {
     width: 100%;
     height: 100%;
+    
 }
 
 .themes_Body {
@@ -19,8 +20,6 @@ body{
     flex-direction: row;
 } */
 
-
-
 .theme_Item {
     width: 100%;
     height: 250px;
@@ -31,7 +30,7 @@ body{
     border-radius: 5px;
 }
 
-.theme_createDate{
+.theme_createDate {
     color: black;
     font-weight: 400;
     float: right;
@@ -40,8 +39,6 @@ body{
     padding-right: 15px;
     font-style: italic;
 }
-
-
 
 .themes_Image {
     width: 35%;
@@ -52,19 +49,15 @@ body{
     margin-left: 5px;
 }
 
-
-
 .themes_Image img {
     max-width: 100%;
     border-radius: 2px;
-    align-items:right;
-    border-radius:2px;
+    align-items: right;
+    border-radius: 2px;
     height: 80%;
     object-fit: cover;
     margin-top: 10%;
 }
-
-
 
 .themes_Content {
     width: 60%;
@@ -77,9 +70,7 @@ body{
     position: relative;
 }
 
-
-
-.theme_User{
+.theme_User {
     width: 15%;
     height: 100%;
     padding: 20px;
@@ -87,7 +78,6 @@ body{
     align-items: center;
     display: flex;
 }
-
 
 .themes_Title {
     color: black;
@@ -97,17 +87,13 @@ body{
 }
 
 
-
-.themes_Title:hover{
+.themes_Title:hover {
     color: black;
 }
-
-
 
 .themes_Text {
     font-size: 15px;
     color: black;
-
 }
 
 .side_div {

@@ -17,7 +17,7 @@
                 <span class="theme_Description"><span style="font-style:italic">Opis: </span> {{ $theme->description }}</span>
 
                 <div class="theme_Details">
-                    <p><strong>Moderator:</strong><span><p style="font-style: cursive; font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 16px; color: #333;">Tema je kreirana od strane:</p> {{ $theme->user->name }}</span></p>
+                    <!-- <p><strong>Moderator:</strong><span><p style="font-style: cursive; font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 16px; color: #333;">Tema je kreirana od strane:</p> {{ $theme->user->name }}</span></p> -->
                 </div>
 
 
@@ -89,7 +89,7 @@
                 @auth
                     @if(auth()->user()->role === 'moderator' && auth()->user()->id === $theme->user_id)
                         <a href="{{ route('themes.create-poll', $theme) }}" class="new-poll">
-                            <i class="fas fa-plus-circle" style="padding-right: 5px; color: green"></i>Zapocni novu anketu
+                            Zapocni novu anketu
                         </a>
                     @endif
                 @endauth

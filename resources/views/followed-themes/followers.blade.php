@@ -16,7 +16,7 @@
                 transform: translateX(10px);
             }
         }
-        
+
 
         .back-link i {
             margin-right: 8px;
@@ -34,7 +34,7 @@
         <i class="fas fa-arrow-left"></i> Home
     </a>
 
-        <h1 class="heading">Pratioci teme "{{ $theme->title }}"</h1>
+        <h1 class="heading"> "{{ $theme->title }}"</h1>
         <div class="line"></div>
 
         @if ($followers->isEmpty())

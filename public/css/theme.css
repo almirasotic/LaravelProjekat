@@ -12,7 +12,7 @@
 }
 
 .theme_Container {
-    background-color: whitesmoke;
+    background-color: rgb(165, 232, 84);
     width: 50%;
     height: 450px;
     margin-bottom: 20px;
@@ -32,7 +32,7 @@
 }
 
 .anketa_container {
-    background-color: white;
+    background-color: rgb(165, 232, 84);
     width: 50%;
     min-height: 30px;
     margin-bottom: 20px;
@@ -54,6 +54,7 @@
 }
 
 .new-poll {
+
     height: 50px;
     border-radius: 15px;
     padding: 10px;
@@ -190,6 +191,7 @@
 .comment_right {
     width: 78%;
     padding: 15px;
+    background-color: rgb(165, 232, 84);
 }
 
 .back {

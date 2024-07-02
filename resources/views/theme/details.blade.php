@@ -10,13 +10,13 @@
                 <form action="{{ route('poll.delete', $poll) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="close_poll">Zatvori anketu</button>
+                    <button type="submit" class="close_poll" style="color: red; font-size:30px">Zatvori anketu</button>
                 </form>
             @endif
 
             <br>
-            <label>ANKETA</label>
-            <p>{{ $poll->question }}</p>
+            <label style="color: white">ANKETA</label>
+            <p style="font-size: 50px; color:white">{{ $poll->question }}</p>
             <form action="{{ route('poll.response.store') }}" method="POST">
 
 
@@ -24,11 +24,11 @@
                 <input type="hidden" name="poll_id" value="{{ $poll->id }}">
                 <input type="hidden" name="theme_id" value="{{ $theme->id }}">
 
-                <ul>
+                <ul style="color: white;">
                     @foreach (json_decode($poll->options) as $option)
                         <li>
                             <input type="radio" id="option{{ $loop->index }}" name="response" value="{{ $option }}">
-                            <span for="option{{ $loop->index }}" style="font-size: 18px; color:black">{{ $option }}</span>
+                            <span for="option{{ $loop->index }}" style="font-size: 18px; color:white; font-size: 20px;">{{ $option }}</span>
                         </li>
                     @endforeach
                 </ul>
@@ -41,11 +41,11 @@
         </div>
 
         <div class="statistics">
-            <span style="font-size: 20px; font-weight: bold; display:flex; ">Statistika</span>
+            <span style="font-size: 50px; font-weight: bold; display:flex; color:white">Statistika</span>
             <ul>
                 @foreach ($responsePercentages as $option => $percentage)
                     <li>
-                        <span style="font-size: 18px; color:black">{{ $option }} - {{ round($percentage, 2) }}%</span>
+                        <span style="font-size: 18px; color:white">{{ $option }} - {{ round($percentage, 2) }}%</span>
                     </li>
                 @endforeach
             </ul>

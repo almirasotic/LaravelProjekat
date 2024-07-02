@@ -17,7 +17,7 @@
                 transform: translateX(10px);
             }
         }
-        
+
 
         .back-link i {
             margin-right: 8px;
@@ -35,19 +35,19 @@
         <i class="fas fa-arrow-left" ></i> Home
     </a>
 
-           
-            
+
+
             <form  method="post" action="/users/authenticate">
                 @csrf
 
-                <label for="email">E-mail adresa</label>
+                <label for="email" style="font-size: 20px; color: Yellow; font-weight: bold;">E-mail adresa</label>
                 <input type="email" id="email" name="email" value="{{old('email')}}">
                 @error('email')
                 <p style="color: red">{{$message}}</p>
                 @enderror
                 <br>
 
-                <label for="password">Lozinka</label>
+                <label for="password" style="font-size: 20px; color: Yellow; font-weight: bold;">Lozinka</label>
                 <input type="password" id="password" name="password" value="{{old('password')}}">
                 @error('password')
                 <p style="color: red">{{$message}}</p>
@@ -58,9 +58,9 @@
 
                 <span class="line"></span>
 
-                <p>U slucaju da se niste registrovali <a style="padding-left: 2%; color:red; text-decoration:none;" href="/register">Registrujte se</a></p>
+                <p style="font-size: 20px; color: Yellow; font-weight: bold;">U slucaju da se niste registrovali <a style="padding-left: 2%; color:red; text-decoration:none;" href="/register">Registrujte se</a></p>
             </form>
         </div>
-       
+
 </div>
 </x-layout>
