@@ -33,7 +33,7 @@
                         <li><a href="/users/manage"> Prikaz zvih korisnika/moderatora</a></li>
                         <li><a href="/users/requests"> Teme/Prihvatanje moderatora</a></li>
                     @endif
-                    <li id="userDropdown" class="dropdown"> 
+                    <li id="userDropdown" class="dropdown">
                         <a href="#" role="button" id="userDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center;">
                             @if (auth()->user()->picture != "null")
                                 <!-- <img src="{{ asset('storage/' . auth()->user()->picture) }}" alt="{{ auth()->user()->name }}" style="width:30px;height:30px;border-radius:80px; margin-right:5px"> -->
@@ -65,7 +65,7 @@
             @else
                 <div class="account">
                 <ul class="account">
-    <li><a href="/login">Prijavite se</a></li>
+    <li><a href="/login">Prijava</a></li>
 </ul>
 
                 </div>

@@ -177,7 +177,7 @@ class ThemeController extends Controller
 
         //Mail::to($theme->user->email)->send(new ThemeRejected($theme));
 
-        return redirect()->back()->with('message', 'Tema je odbijena.');
+        return redirect()->back()->with('message', 'Temu je odbio moderator');
     }
 
 
@@ -189,7 +189,7 @@ class ThemeController extends Controller
 
         // Mail::to($theme->user->email)->send(new ThemeAccepted($theme));
 
-        return redirect()->back()->with('message', 'Tema je prihvaćena.');
+        return redirect()->back()->with('message', 'Prihvatio moderator temu');
     }
 
 

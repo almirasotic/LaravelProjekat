@@ -45,7 +45,7 @@
             @guest
                 <div class="centered-message">
                     <div style="margin-bottom: 10px; color: black; font-weight:1000;">Napravite nalog da biste ostavili komentar</div>
-                    <div><a href="/login" style="color: red; text-decoration:underline">Prijavite se</a></div>
+                    <div><a href="/login" style="color: red; text-decoration:underline">Prijava</a></div>
                 </div>
             @else
                 <form method="POST" action="/comments/{{ $themeId }}" enctype="multipart/form-data">
