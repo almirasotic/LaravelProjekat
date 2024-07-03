@@ -7,7 +7,7 @@
 
         <div class="theme_Container">
             <div class="theme_Image">
-                <img src="{{ asset('storage/' . $theme->image) }}" alt="none" style="color: white; text-align:center; border-radius:2px; height:50px">
+                <!-- <img src="{{ asset('storage/' . $theme->image) }}" alt="none" style="color: white; text-align:center; border-radius:2px; height:50px"> -->
             </div>
 
 
@@ -58,7 +58,7 @@
 
                             @if(auth()->user()->role === 'moderator' && auth()->user()->id === $theme->user_id)
                             <a href="{{ route('followed-themes.followers', ['themeId' => $theme->id]) }}" class="followers-button">
-                                <i class="fas fa-usersss" style="padding-right: 5px;"></i>Pratioci
+                                <i class="fas fa-usersss" style="padding-right: 5px;"></i>Pratioci na temu koju ste kreirali
                             </a>
 
                             @endif

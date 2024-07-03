@@ -11,13 +11,13 @@
     <div class="content-wrapper">
         <!-- Header and other content -->
         <header>
-           
+
         </header>
         <main>
             @yield('content')
         </main>
         <footer class="footer">
-            <a href="/contact" class="contact-button">Kontakt</a>
+            <!-- <a href="/contact" class="contact-button">Kontakt</a> -->
             <p class="text">© 2024 Programming</p>
         </footer>
     </div>

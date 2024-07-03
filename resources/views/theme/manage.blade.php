@@ -32,7 +32,7 @@
 
     @else
     <div class="no_theme">
-        <p>Trenutno nemate nijednu započetu temu.</p>
+        <p style="font-size: 40; color:white; margin-left:150px;">Kao moderator nemate kreiranih tema</p>
     </div>
     @endunless
 

@@ -253,19 +253,21 @@
 .create_new_theme a {
     text-decoration: none;
     border: none;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 5px;
     align-self: center;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: -50px;
     transition: color 0.1s;
-    color: black;
+    color: red;
     font-weight: bold;
+    margin-left: -50px;
+    font-size: 50px;
 }
 
 .create_new_theme a:hover {
-    color: black;
-    text-decoration: underline;
+    color: rgb(145, 18, 18);
+    /* text-decoration: underline; */
 }
 
 .new_theme {
@@ -281,7 +283,7 @@
     display: none;
 }
 
-.no_theme {
+/* .no_theme {
     width: 40%;
     display: flex;
     justify-content: center;
@@ -292,7 +294,7 @@
     border-radius: 8px;
     font-size: 18px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* Dodati responzivni CSS za telefone */
 

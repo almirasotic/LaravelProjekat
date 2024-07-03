@@ -90,8 +90,8 @@
             </div>
         </div>
 
-        <div class="p-6">
-            {{$themes->links()}}
+        <div class="p-6" style="color:white">
+            Klikom na dugme mozete preci na sledecu stranicu{{$themes->links()}}
         </div>
 
     </x-layout>

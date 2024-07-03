@@ -1,6 +1,6 @@
 <x-layout>
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
-    <div class="contact_Body">
+    <!-- <div class="contact_Body">
         <div class="contact_container">
             <h1>KONTAKT</h1>
 
@@ -25,6 +25,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </x-layout>

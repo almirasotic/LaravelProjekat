@@ -73,7 +73,7 @@ class UserController extends Controller
         $request->picture->move(public_path('storage'), $imageName);
         $formFields['picture'] = $imageName;
 
-       
+
 
         $user = User::create($formFields);
 
@@ -81,7 +81,7 @@ class UserController extends Controller
 
         auth()->login($user);
 
-        return redirect('/login')->with('message', 'Korisnik je uspesno registrovan!');
+        return redirect('/login')->with('message', 'uspesno ste ste registrovali');
     }
 
 
@@ -101,7 +101,7 @@ class UserController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('message','Izlogovani ste');
+        return redirect('/')->with('message','niste vise prijavljeni');
     }
 
 
@@ -115,7 +115,7 @@ class UserController extends Controller
     public function destroy(User $user){
 
         $user->delete();
-        return back()->with('message', "Korisnik uspešno izbrisan!");
+        return back()->with('message', "izbrisan");
     }
 
 
@@ -160,7 +160,7 @@ class UserController extends Controller
         if(auth()->attempt($formFields)){
             $request->session()->regenerate();
 
-            return redirect('/')->with('message','Sada ste ulogovani!');
+            return redirect('/')->with('message','prijavili ste se');
         }
 
         return back()->withErrors(['password'=> 'Pogresna sifra'])->onlyInput('email');

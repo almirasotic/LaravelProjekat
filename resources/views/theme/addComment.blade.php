@@ -34,11 +34,11 @@
 
     <div class="form_body">
 
-        <a href="{{ url()->previous() }}" style="color:black;text-decoration: none; margin-bottom:2%; font-size:20px; margin-left:-150px;">Home</a>
+        <!-- <a href="{{ url()->previous() }}" style="color:black;text-decoration: none; margin-bottom:2%; font-size:20px; margin-left:-150px;">Home</a> -->
 
-        <span style="font-size: 27px; margin-left:350px;">Posalji odgovor</span><br>
+        <span style="font-size: 40px;color: white; margin-left:300px; margin-top:-50px;">Posalji odgovor na temu moderatora</span><br>
 
-        <span style="color:black;  padding-bottom:50px; margin-left:350px; font-weight:1000;">Trebate da napravite nalog</span>
+        <!-- <span style="color:black;  padding-bottom:50px; margin-left:350px; font-weight:1000;">Trebate da napravite nalog</span> -->
 
         <div class="form_container">
 
@@ -52,20 +52,20 @@
 
                     @csrf
                     <div class="title">
-                        <label for="title" style="font-size: 18px; color:black">Naslov</label>
-                        <input type="text" id="title" name="title" value="Odg: {{ $themeTitle }}">
+                        <label for="title" style="font-size: 30px; color:white; margin-left:-10px;"></label>
+                        <input type="text" id="title" name="title" value=" {{ $themeTitle }}" style=" background-color:yellow;">
                     </div>
                     <br>
 
-                    <textarea id="comment" name="comment" rows="5" required placeholder="Komentar"></textarea>
+                    <textarea id="comment" name="comment" rows="1" required placeholder="" style=" background-color:yellow;"></textarea>
 
                     @error('comment')
                         <p>{{$message}}</p>
                     @enderror
                     <br>
 
-                    <button type="submit" class="button_comment"><i class="fas fa-plus" style="padding-right: 5px; color:Blue"></i>
-                        Dodajte komentar</button>
+                    <button type="submit" class="button_comment" style="width:25%">
+                        Dodajte komentar na temu moderatora</button>
                 </form>
             @endguest
 

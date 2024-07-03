@@ -2,8 +2,8 @@
 <x-layout>
 
     @unless ($users->isEmpty())
-        <div class="manage_container" style="background-color: rgb(165, 232, 84); width: 65%; margin-left:150px; margin-top: 50px;">
-            <h1 class="heading">Upravljanje korisnicima</h1>
+        <div class="manage_container" style="background-color: rgb(165, 232, 84); width: 65%; margin-left:150px; margin-top: 50px;height:100%;">
+            <h1 class="heading" style="margin-left: 150px;">Admin ima prikaz samo ovoj stranici</h1>
             <label style="padding-bottom: 10px; font-style:italic"></label>
 
             <div class="line"></div>
@@ -11,15 +11,15 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Korisnik</th>
-                        <th>Uloga</th>
+                        <th>Korisnik-----</th>
+                        <th>Uloga korisnika</th>
                         <th>Email</th>
-                        <th>Broj telefona</th>
-                        <th>Datum rodjenja</th>
+                        <th> telefon</th>
+                        <th>rodjenje</th>
                         <th>JMBG</th>
                         <th>Grad</th>
-                        <th>Gržava</th>
-                        <th class="actions">Opcije</th>
+                        <th>Grzava</th>
+                        <th class="actions">Brisanje</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,8 +27,8 @@
                     <tr class="users_rows">
                         <td class="user-name" style="text-align: center; vertical-align: middle;">
                             <div style="display: flex; flex-direction: column; align-items: center;">
-                                <img src="{{ asset('storage/' . $user->picture) }}" alt="{{ $user->name }}" style="width: 35px; height: 35px; border-radius: 50%; display: block; margin: 0 auto;">
-                                <span style="display: block;">{{ $user->name }}</span>
+                                <img src="{{ asset('storage/' . $user->picture) }}" alt="{{ $user->name }}" style="width: 70px; height: 70px; display: block; margin: 0 auto; background-color:red;"> <br><br>
+                                <span style="display: block; color:red">{{ $user->name }}</span>
                             </div>
                         </td><td class="user-role">{{ $user->role }}</td>
                         <td>{{ $user->email }}</td>

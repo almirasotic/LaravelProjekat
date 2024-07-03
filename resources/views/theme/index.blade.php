@@ -34,7 +34,7 @@
 
                 @if ($currentThemesCount < $maxThemesAllowed)
                     <div class="create_new_theme">
-                        <a href="/themes/create">Započni novu temu</a>
+                        <a href="/themes/create">Kreiraj novu temu kao moderator</a>
                     </div>
                 @else
                 <p class="moving-text" >Unet je maksimalni broj tema</p>
@@ -48,7 +48,7 @@
                 @endforeach
             @else
             <div class="no_theme">
-                <p>Trenutno nemate ni jednu započetu temu.</p>
+                <p style="font-weight: 50px; margin-top:-20px; color: white;">Niste kreirali temu kao moderator</p>
             </div>
             @endunless
 

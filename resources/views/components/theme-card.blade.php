@@ -26,7 +26,7 @@
     <div class="themes_Content">
         <a href="themes/{{$theme['id']}}" class="themes_Title">{{$theme->title}}</a>
 
-        <span class="themes_Text"><span style="font-style: italic">Opis: </span> {{ Str::limit($theme->description, 100) }}</span>
+        <span class="themes_Text"><span style="font-weight: bold;">Tema koju je kreirao moderator:  </span> {{ Str::limit($theme->description, 100) }}</span>
 
         <div class="follow">
         <a href="/themes/addComment?themeTitle={{ $theme->title }}&themeId={{ $theme->id }}" class="theme_button_comment" style="font-size: 10px;">

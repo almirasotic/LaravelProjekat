@@ -160,12 +160,12 @@ class ThemeController extends Controller
 
         $themeTitle = $theme->title;
         NewsFeed::create([
-            'content' => auth()->user()->name . " je obrisao/la temu '$themeTitle'",
+            'content' => auth()->user()->name . " je obrisao temutemu '$themeTitle'",
         ]);
 
         $theme->delete();
 
-        return redirect('/')->with('message', "Tema uspešno obrisana!");
+        return redirect('/')->with('message', "obrisana tema");
     }
 
 
@@ -255,7 +255,7 @@ class ThemeController extends Controller
         $poll->save();
 
 
-        $newsFeedContent = "Nova anketa je kreirana na temu '{$theme->title}' od strane kreatora teme " . auth()->user()->name;
+        $newsFeedContent = "Anketa je '{$theme->title}' korisnik koji je kreiranu anketu je ---> " . auth()->user()->name;
         NewsFeed::create([
             'content' => $newsFeedContent,
         ]);

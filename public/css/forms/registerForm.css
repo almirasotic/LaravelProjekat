@@ -1,12 +1,11 @@
-.form_body{
+.form_body {
     display: flex;
     justify-content: center;
     min-height: 90vh;
     margin-top: -75px;
 }
 
-
-.form_container{
+.form_container {
     width: 38%;
     padding: 20px;
     display: flex;
@@ -14,16 +13,15 @@
     justify-content: space-evenly;
     align-items: left;
     border-radius: 10px;
-
 }
 
-.form_container h2{
+.form_container h2 {
     height: 5vh;
     color: black;
     font-size: 28px;
 }
 
-.form_container div{
+.form_container div {
     text-align: center;
     width: 80%;
     border-bottom: 1px solid #728651;
@@ -31,18 +29,19 @@
     margin-bottom: 5%;
 }
 
-.form_container form{
+.form_container form {
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.form_container label{
+.form_container label {
     color: black;
 }
 
-.form_container input,textarea{
+.form_container input,
+textarea {
     border-radius: 5px;
     height: 40px;
     padding-left: 12px;
@@ -64,16 +63,13 @@
     text-decoration: none;
 }
 
-
-
-
-.form_container p{
+.form_container p {
     margin-top: 6%;
     color: black;
     font-size: 17px;
 }
 
-.form_container a{
+.form_container a {
     text-decoration: underline;
     color: #728651;
     margin-bottom: 5%;
@@ -81,8 +77,7 @@
     transition: color 0.3s;
 }
 
-
-.form_container a:hover{
+.form_container a:hover {
     text-decoration: underline;
     color: #384227;
 }
@@ -98,40 +93,39 @@ input[type="file"] {
     color: white;
     border-radius: 5px;
     border: 1px solid grey;
+    margin-left: 150px;
 }
 
 .custom-file-upload:hover {
     border: 1px solid blue;
 }
 
-
-
-@media (max-width:767px){
-    .form_container{
+@media (max-width: 767px) {
+    .form_container {
         width: 90%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .form_container{
-        width:50%;
+    .form_container {
+        width: 50%;
         height: 40vh;
     }
 
-    .form_container h2{
+    .form_container h2 {
         height: 5vh;
         font-size: 28px;
     }
 
-    .form_container div{
+    .form_container div {
         height: 5vh;
         width: 100%;
         padding-bottom: 0px;
     }
 }
 
-@media (width:1024px){
-    .form_container{
-        width:40%;
+@media (width: 1024px) {
+    .form_container {
+        width: 40%;
     }
 }

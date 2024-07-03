@@ -24,16 +24,16 @@
                     @endif
                     @if(auth()->user()->role == 'moderator')
                     <ul style="list-style-type: none; padding: 0;">
-    <li style="margin-bottom: 10px;"><a href="/themes">Teme za praćenje</a></li>
-    <li style="margin-bottom: 10px;"><a href="/themes/manage">Podešavanja za teme</a></li>
+    <li style="margin-bottom: 10px;"><a href="/themes">Kreiraj temu</a></li>
+    <li style="margin-bottom: 10px;"><a href="/themes/manage">Opcije teme kao moderator</a></li>
 </ul>
 
                     @endif
                     @if (auth()->user()->role == 'admin')
-                        <li><a href="/users/manage"> Korisnici</a></li>
-                        <li><a href="/users/requests"> Zahtevi za teme</a></li>
+                        <li><a href="/users/manage"> Prikaz zvih korisnika/moderatora</a></li>
+                        <li><a href="/users/requests"> Teme/Prihvatanje moderatora</a></li>
                     @endif
-                    <li id="userDropdown" class="dropdown">
+                    <li id="userDropdown" class="dropdown"> 
                         <a href="#" role="button" id="userDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: flex; align-items: center;">
                             @if (auth()->user()->picture != "null")
                                 <!-- <img src="{{ asset('storage/' . auth()->user()->picture) }}" alt="{{ auth()->user()->name }}" style="width:30px;height:30px;border-radius:80px; margin-right:5px"> -->
